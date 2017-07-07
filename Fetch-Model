@@ -1,0 +1,19 @@
+/**
+ * Created by yml on 2017/3/28.
+ */
+import FetchUtil from './FetchUtil';
+import ApiConst from './/ApiConst';
+import ApiInterface from './ApiInterface';
+
+
+let MyModal = {
+    /**
+     * 通知公告列表
+     */
+    Getlist(pa, response, error){
+        var	params = {
+            ...pa,
+        };
+        FetchUtil.fetchPostJson(ApiConst.Versions().BaseUrl + ApiInterface.Getlist, FetchUtil.toQueryString(params), response, error);
+    },
+ }
